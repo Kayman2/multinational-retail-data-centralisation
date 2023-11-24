@@ -1,0 +1,4 @@
+
+
+# Ymal database credentials
+*.ymal
