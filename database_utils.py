@@ -24,6 +24,21 @@ class DatabaseConnector:
         engine = create_engine(f"{'postgresql'}+{'psycopg2'}://{'aicore_admin'}:{'AiCore2022'}@{'data-handling-project-readonly.cq2e8zno855e.eu-west-1.rds.amazonaws.com'}:{'5432'}/{'postgres'}")
         return engine
 
+    ''' This method creates engine using PostgresSQL'''
+    def init_PG_engine(self):
+        db_username = 'postgres'
+        db_password = 'Wingchun1!'
+        db_host = 'localhost'
+        db_port = '5432'
+        db_name = 'sales_data'
+
+        # Create a database connection
+        db_url = f'postgresql://{db_username}:{db_password}@{db_host}:{db_port}/{db_name}'
+        # change to local engine
+        engine = create_engine(db_url)
+
+        #engine = create_engine(f"{'postgresql'}+{'psycopg2'}://{'aicore_admin'}:{'AiCore2022'}@{'data-handling-project-readonly.cq2e8zno855e.eu-west-1.rds.amazonaws.com'}:{'5432'}/{'postgres'}")
+        return engine
 
     ''' This method sends bd_creds.yaml file to SQL '''
     def upload_to_db(self, df, table_name , engine):
