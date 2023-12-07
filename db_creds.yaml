@@ -4,7 +4,8 @@ RDS_USER: 'aicore_admin'
 RDS_DATABASE: 'postgresql'
 RDS_PORT: 5432
 RDS_DBAPI: 'psycopg2'
-
-
-
-
+db_username: 'postgres'
+db_password: 'Wingchun1!'
+db_host: 'localhost'
+db_port: '5432'
+db_name: 'sales_data'
